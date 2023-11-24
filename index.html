@@ -9,8 +9,11 @@
     <body>
         <style>
             body {
+                /* Style */
                 background-color: #13121C;
+                /* Typography */
                 font-family:"Rubik", sans-serif;
+                /* Layout */
                 display: flex;
                 padding: 3.5vh;
                 padding-top: 7.5vh;
@@ -19,38 +22,53 @@
                 gap: 7.5vh;
             }
             h1 {
+                /* Style */
+                color:white;
+                /* Typography */
                 text-align: left;
                 font-size: 4vh;
-                color:white;
             }
             .header {
+                /* Style */
+                color:white;
+                text-shadow: 0px 0px 4vh #FFFFFF75;
+                /* Typography */
                 text-align: left;
                 font-size: 4vh;
                 font-weight: 700;
+                /* Layout */
                 padding-top: 20px;
-                color:white;
-                text-shadow: 0px 0px 4vh #FFFFFF75;
             }
             p {
+                /* Style */
                 color: white;
+                /* Typography */
                 font-size: 3.5vh;
             }
             li {
+                /* Style */
                 color: white;
+                /* Typography */
                 font-size: 3.5vh;
             }
             .smol {
+                /* Style */
                 color: #FFFFFF75;
+                /* Typography */
                 font-size: 3vh;
             }
             .imp {
+                /* Style */
                 text-shadow: 0px 0px 4vh rgb(79, 159, 212);
-                font-size: 6.5vh;
-                background: linear-gradient(90deg, rgb(173, 222, 255) 0%, rgb(110, 130, 197) 99.83%);
-                -webkit-background-clip: text;
+                background: linear-gradient(90deg, rgb(173, 222, 255) 0%, rgb(145, 204, 243) 99.83%);
+                background-clip: text;
                 -webkit-text-fill-color: transparent;
+                /* Typography */
+                font-size: 6.5vh;
+                font-weight: bolder;
             }
             .layout {
+                /* Layout */
                 flex-direction: row;
                 gap: 4.5vh;
                 align-items: flex-start;
@@ -60,6 +78,7 @@
             .infoUserSocials {
                 background: linear-gradient(171deg, #212030 0%, #121024 100%);
                 border-radius: 7.5vh;
+                /* Layout */
                 display: flex;
                 padding: 3.5vh 5.5vh;
                 flex-direction: column;
@@ -70,10 +89,12 @@
                 width: 100%;
             }
             .newbase {
+                /* Style */
                 background: linear-gradient(171deg, #13121C 0%, #0f0e16 100%);
                 box-shadow:  2vh 2vh 4vh #0c0c12,
                             -2vh -2vh 4vh #1a1826;
                 border-radius: 7.5vh;
+                /* Layout */
                 display: flex;
                 padding: 3.5vh 5.5vh;
                 flex-direction: column;
@@ -84,9 +105,12 @@
                 width: 100%;
             }
             .base {
+                /* Style */
                 background: linear-gradient(171deg, #13121C 0%, #0f0e16 100%);
                 box-shadow:  2vh 2vh 4vh #0c0c12,
                             -2vh -2vh 4vh #1a1826;
+                border-radius: 7.5vh;
+                /* Layout */
                 display: flex;  
                 align-self: stretch;
                 padding: 3.5vh 5.5vh;
@@ -95,33 +119,43 @@
                 align-items: flex-start;
                 gap: 0px;
                 height: auto;
-                border-radius: 7.5vh;
+                
             }
             .icon {
+                /* Style */
                 width: 12vh;
                 box-shadow: 0vh 2vh 4vh #00000050;
                 border-radius: 2vh;
             }
         </style>
         
+        <!-- Top Header -->
         <div class="layout">
+            <!-- Name & Pronouns -->
             <div class="infoUserSocials" style="width: 60vh; flex-direction: row; align-items: center; gap: 4vh;">
                 <img src="https://github.com/kewla1d/KewlaidWebsite/blob/main/Resources/profilepic.png?raw=true" style="width: 16vh; box-shadow: 0px 0px 4vh 0px #68462B; border-radius: 4vh;">
                 <h1><span class="imp">kewlaid!</span><br>he/him</h1>
             </div>
+
+            <!-- Socials -->
             <div class="infoUserSocials" style="align-self: stretch; align-items: flex-end;">
-                <!-- <p><span class="header">Socials</span></p>  -->
                 <div style="display: flex; justify-content: center; align-items: center; gap: 4vh; flex: 1 0 0; align-self: stretch;">
+                    
+                    <!-- Twitter -->
                     <div style="display: flex; gap: 2vh; align-items: center; flex: 1 0 0; align-self: stretch;">
                         <img src="https://github.com/kewla1d/KewlaidWebsite/blob/main/Resources/iconTwitter.png?raw=true" class="icon">
                         <h1 style="font-size: 3vh; color: #FFFFFF75">Twitter<br>
                         <span class="smol" style="color:white; font-size: 4vh;">@k3wl_4iD</span></h1>
                     </div>
+
+                    <!-- Instagram -->
                     <div style="display: flex; gap: 2vh; align-items: center; flex: 1 0 0; align-self: stretch;">
                         <img src="https://github.com/kewla1d/KewlaidWebsite/blob/main/Resources/iconInstagram.png?raw=true" class="icon">
                         <h1 style="font-size: 3vh; color: #FFFFFF75">Instagram<br>
                         <span class="smol" style="color:white; font-size: 4vh;">@_.kewlaid</span></h1>
                     </div>
+
+                    <!-- Discord -->
                     <div style="display: flex; gap: 2vh; align-items: center; flex: 1 0 0; align-self: stretch;">
                         <img src="https://github.com/kewla1d/KewlaidWebsite/blob/main/Resources/iconDiscord.png?raw=true" class="icon">
                         <h1 style="font-size: 3vh; color: #FFFFFF75">Discord<br>
@@ -131,6 +165,7 @@
             </div>
         </div>
 
+        <!-- Actual Information -->
         <div class="layout">
             <div class="newbase" style="align-self: stretch; align-items: flex-start; width: 50%;">
                 <span class="header">fun facts</span>
