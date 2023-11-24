@@ -35,6 +35,10 @@
                 color: white;
                 font-size: 3.5vh;
             }
+            li {
+                color: white;
+                font-size: 3.5vh;
+            }
             .smol {
                 color: #FFFFFF75;
                 font-size: 3vh;
@@ -46,7 +50,7 @@
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
             }
-            .cover {
+            .layout {
                 flex-direction: row;
                 gap: 4.5vh;
                 align-items: flex-start;
@@ -55,6 +59,20 @@
             }
             .infoUserSocials {
                 background: linear-gradient(171deg, #212030 0%, #121024 100%);
+                border-radius: 7.5vh;
+                display: flex;
+                padding: 3.5vh 5.5vh;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                height: auto;
+                align-self: stretch;
+                width: 100%;
+            }
+            .newbase {
+                background: linear-gradient(171deg, #13121C 0%, #0f0e16 100%);
+                box-shadow:  2vh 2vh 4vh #0c0c12,
+                            -2vh -2vh 4vh #1a1826;
                 border-radius: 7.5vh;
                 display: flex;
                 padding: 3.5vh 5.5vh;
@@ -86,7 +104,7 @@
             }
         </style>
         
-        <div class="cover">
+        <div class="layout">
             <div class="infoUserSocials" style="width: 60vh; flex-direction: row; align-items: center; gap: 4vh;">
                 <img src="https://github.com/kewla1d/KewlaidWebsite/blob/main/Resources/profilepic.png?raw=true" style="width: 16vh; box-shadow: 0px 0px 4vh 0px #68462B; border-radius: 4vh;">
                 <h1><span class="imp">kewlaid!</span><br>he/him</h1>
@@ -113,13 +131,23 @@
             </div>
         </div>
 
-        <div class="base" style="width: 60vh">
-            <p><span class="header">fun facts</span><span class="smol"><br></span>
-                • im learning violin <br>
-                • im a web designer slightly <br>
-                • im a graphic designer 😱😱😱<br>
-                • i'm filipino<br>
-                • i don't know what else to put here</p>
+        <div class="layout">
+            <div class="newbase" style="align-self: stretch; align-items: flex-start; width: 50%;">
+                <span class="header">fun facts</span>
+                <ul>
+                    <li>im learning violin</li>
+                    <li> im a web designer slightly</li>
+                    <li> im a graphic designer 😱😱😱</li>
+                    <li> i'm filipino</li>
+                    <li> i don't know what else to put here</li>
+                </ol>
+            </div>
+            <div class="newbase" style="align-self: stretch; align-items: flex-start; width: 100%;">
+                <span class="header">Likings</span><br>
+                <ul>
+                    <li>more stuff eta s0n</li>
+                </ol>
+            </div>
         </div>
     </body>
 </html>
