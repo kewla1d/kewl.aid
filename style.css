@@ -1,0 +1,195 @@
+/* Stuff */
+* {
+    * {
+    font-family: 'SF Pro ', sans-serif;
+	font-weight: 400;
+	text-decoration: none;
+	user-select: none;
+	color: white;
+	transition: all 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+
+body {
+    margin: 0;
+    overflow-y: auto;
+	animation: auto;
+	transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+}
+
+
+img#background {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    position: fixed;
+}
+
+#dock_area {
+    position: fixed;
+    bottom: 0;
+    align-self: stretch;
+    height: 90px;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+    justify-content: center;
+
+    #dock_blur {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 200px;
+        z-index: 99;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        
+        div {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;  
+        }
+    }
+
+    #dock_blur > div,
+    #dock_blur::before,
+    #dock_blur::after {
+    position: absolute;
+    inset: 0;}
+    #dock_blur::before {
+    content: "";
+    z-index: 1;
+    backdrop-filter: blur(0.125px);
+    mask: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 1) 12.5%,
+        rgba(0, 0, 0, 1) 25%,
+        rgba(0, 0, 0, 0) 37.5%
+    );}
+    #dock_blur > div:nth-of-type(1) {
+    z-index: 2;
+    backdrop-filter: blur(0.25px);
+    mask: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 12.5%,
+        rgba(0, 0, 0, 1) 25%,
+        rgba(0, 0, 0, 1) 37.5%,
+        rgba(0, 0, 0, 0) 50%
+    );}
+    #dock_blur > div:nth-of-type(2) {
+    z-index: 3;
+    backdrop-filter: blur(0.5px);
+    mask: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 25%,
+        rgba(0, 0, 0, 1) 37.5%,
+        rgba(0, 0, 0, 1) 50%,
+        rgba(0, 0, 0, 0) 62.5%
+    );}
+    #dock_blur > div:nth-of-type(3) {
+    z-index: 4;
+    backdrop-filter: blur(1px);
+    mask: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 37.5%,
+        rgba(0, 0, 0, 1) 50%,
+        rgba(0, 0, 0, 1) 62.5%,
+        rgba(0, 0, 0, 0) 75%
+    );}
+    #dock_blur > div:nth-of-type(4) {
+    z-index: 5;
+    backdrop-filter: blur(2px);
+    mask: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 50%,
+        rgba(0, 0, 0, 1) 62.5%,
+        rgba(0, 0, 0, 1) 75%,
+        rgba(0, 0, 0, 0) 87.5%
+    );}
+    #dock_blur > div:nth-of-type(5) {
+    z-index: 6;
+    backdrop-filter: blur(4px);
+    mask: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 62.5%,
+        rgba(0, 0, 0, 1) 75%,
+        rgba(0, 0, 0, 1) 87.5%,
+        rgba(0, 0, 0, 0) 100%
+    );}
+    #dock_blur > div:nth-of-type(6) {
+    z-index: 7;
+    backdrop-filter: blur(8px);
+    mask: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 75%,
+        rgba(0, 0, 0, 1) 87.5%,
+        rgba(0, 0, 0, 1) 100%
+    );}
+    #dock_blur::after {
+    content: "";
+    z-index: 8;
+    backdrop-filter: blur(16px);
+    mask: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 87.5%,
+        rgba(0, 0, 0, 1) 100%
+    );}
+}
+
+
+div#dock {
+    z-index: 100;
+    border-radius: 100px;
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    background: linear-gradient(0deg, rgba(38, 38, 38, 0.5) 0%, rgba(38, 38, 38, 0.5) 100%), rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(20px);
+    display: inline-flex;
+    padding: 8px;
+    align-items: flex-start;
+    gap: 2px;
+    width: fit-content;
+    height: fit-content;
+}
+
+.docklink {
+    font-weight: 500;
+    font-size: 16px;
+    padding: 8px 14px;
+    border-radius: 100px;
+    color: rgba(255, 255, 255, 0.6);
+    background: transparent;
+}
+.docklink:hover {
+    font-weight: 500;
+    width: auto;
+    font-size: 16px;
+    padding: 8px 14px;
+    border-radius: 100px;
+    color: rgba(255, 255, 255, 0.6);
+    background: rgba(255,255,255,0.06)
+}
+
+.docklink_s {
+    font-weight: 500;
+    font-size: 16px;
+    padding: 8px 14px;
+    border-radius: 100px;
+    background: transparent;
+}
+.docklink_s:hover {
+    font-weight: 500;
+    font-size: 16px;
+    padding: 8px 14px;
+    border-radius: 100px;
+    background: rgba(255,255,255,0.06);
+}
