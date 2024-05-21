@@ -73,6 +73,7 @@
     }
 
 body {
+    background-color: #0e0e0e;
     margin: 0;
     overflow-y: auto;
 	animation: auto;
@@ -219,40 +220,48 @@ div#dock {
     display: inline-flex;
     padding: 8px;
     align-items: flex-start;
-    gap: 2px;
+    gap: 0px;
     width: fit-content;
     height: fit-content;
+    position: fixed;
+    bottom: 20px;
+}
+
+div#dock:hover {
+    scale: 1.1;
+    bottom: 22px;
 }
 
 .docklink {
-    font-weight: 500;
-    font-size: 16px;
+    cursor:pointer;
+    gap: 0px;
+    margin: 0;
+    justify-content: center;
     padding: 8px 14px;
-    border-radius: 100px;
+    text-decoration: none;
+    width: fit-content;
+    font-size: 17px;
+    font-weight: 500;
     color: rgba(255, 255, 255, 0.6);
-    background: transparent;
+    border-radius: 50%;
 }
 .docklink:hover {
-    font-weight: 500;
-    width: auto;
-    font-size: 16px;
-    padding: 8px 14px;
     border-radius: 100px;
-    color: rgba(255, 255, 255, 0.6);
-    background: rgba(255,255,255,0.06)
+    background: rgba(255,255,255,0.06);
 }
 
 .docklink_s {
-    font-weight: 500;
-    font-size: 16px;
+    cursor:pointer;
+    gap: 0px;
+    justify-content: center;
     padding: 8px 14px;
-    border-radius: 100px;
-    background: transparent;
+    text-decoration: none;
+    width: fit-content;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 50%;
 }
 .docklink_s:hover {
-    font-weight: 500;
-    font-size: 16px;
-    padding: 8px 14px;
     border-radius: 100px;
     background: rgba(255,255,255,0.06);
 }
