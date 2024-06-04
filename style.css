@@ -180,6 +180,10 @@ div#dock {
         width: auto;
         fill: rgba(255, 255, 255, 0.6);
     }
+
+    path {
+        fill: rgba(255, 255, 255, 0.6);
+    }
 }
 .docklink:hover {
     gap: 5px;
@@ -199,6 +203,10 @@ div#dock {
     svg {
         height: 17px;
         width: auto;
+        fill: rgba(255, 255, 255, 1);
+    }
+
+    path {
         fill: rgba(255, 255, 255, 1);
     }
 }
