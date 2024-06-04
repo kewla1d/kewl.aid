@@ -1,29 +1,19 @@
 * {
     font-family: 'SF Pro Display', sans-serif;
-	font-weight: 400;
+	font-weight: 500;
+    box-sizing: border-box;
+    margin: 0;
 	text-decoration: none;
 	user-select: none;
 	color: white;
-    transition: all 0.25s cubic-bezier(0.49, 0.27, 0, 0.97);
+    transition: all 0.5s cubic-bezier(0.49, 0.27, 0, 1);
 }
 
 body {
     background-color: #0e0e0e;
     margin: 0;
-    overflow-y: auto;
+    overflow-y:scroll;
     animation: auto;
-    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-
-img#background {
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    top: 0;
-    left: 0;
-    z-index: -10;
-    position: fixed;
 }
 
 #dock_area {
@@ -144,6 +134,9 @@ img#background {
     );}
 }
 
+#dock_blur.reached {
+    transform: translateY(200px);
+}
 
 div#dock {
     z-index: 100;
@@ -153,98 +146,90 @@ div#dock {
     backdrop-filter: blur(20px);
     display: inline-flex;
     padding: 8px;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
     gap: 0px;
     width: fit-content;
     height: fit-content;
     position: fixed;
-    bottom: 20px;
-}
-
-div#dock:hover {
-    scale: 1.2;
-    bottom: 24px;
+    bottom: 10px;
 }
 
 .docklink {
     cursor:pointer;
-    gap: 0px;
-    margin: 0;
-    justify-content: center;
-    padding: 8px 14px;
-    text-decoration: none;
-    width: fit-content;
-    font-size: 17px;
-    font-weight: 500;
-    color: rgba(255, 255, 255, 0.6);
-    border-radius: 50%;
-}
-.docklink:hover {
-    border-radius: 100px;
-    background: rgba(255,255,255,0.06);
-}
 
-.docklink_s {
-    cursor:pointer;
-    gap: 0px;
-    justify-content: center;
-    padding: 8px 14px;
-    text-decoration: none;
-    width: fit-content;
-    font-size: 17px;
-    font-weight: 500;
-    border-radius: 50%;
-}
-.docklink_s:hover {
-    border-radius: 100px;
-    background: rgba(255,255,255,0.06);
-}
-
-.socialicon {
-    fill: transparent;
-    svg{
-        width: auto;
-        height: 100%;
-    }
-}
-
-.social_docklink {
-    cursor:pointer;
-    gap: 0px;
-    margin: 0;
-    justify-content: center;
-    padding: 8px 14px;
-    text-decoration: none;
-    width: fit-content;
-    font-size: 17px;
-    font-weight: 500;
-    color: rgba(255, 255, 255, 0.6);
-    border-radius: 50%;
     display: flex;
     flex-direction: row;
+    gap: 0px;
+    margin: 0;
+    justify-content: center;
+    padding: 8px 14px;
+    text-decoration: none;
+    width: fit-content;
     align-items: center;
-    align-content: center;
-    
-    .socialicon {
-        filter: blur(20px);
-        opacity: 0;
-        height: 0;
+
+    font-size: 0px;
+    letter-spacing: -5px;
+    line-height: 0;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.0);
+    border-radius: 100px;
+
+    svg {
+        height: 18px;
+        width: auto;
+        fill: rgba(255, 255, 255, 0.6);
     }
 }
-.social_docklink:hover {
-    border-radius: 100px;
+.docklink:hover {
+    gap: 5px;
+    font-size: 17px;
+    letter-spacing: normal;
+    color: rgba(255, 255, 255, 0.6);
     background: rgba(255,255,255,0.06);
-    font-size: -10;
-    color: transparent;
-    letter-spacing: -8px;
+    scale: 0.95;
+}
 
-    .socialicon {
-        height: 20px;
-        filter: blur(0px);
-        opacity: 1;
-        fill: rgba(255,255,255,0.6);
+.docklink.reached {
+    color: white;
+    gap: 5px;
+    font-size: 17px;
+    letter-spacing: normal;
+    
+    svg {
+        height: 17px;
+        width: auto;
+        fill: rgba(255, 255, 255, 1);
     }
-    .socialicon:hover {
-        fill: rgba(255,255,255,1);
-    }
+}
+
+div#cover_holder {
+    padding: 20px 20px;
+    width: 100%;
+    height: 607px;
+}
+
+div#cover {
+    background-color: #ffffff28;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#greeting {
+    font-size: 40px;
+}
+#name {
+    font-size: 60px;
+    font-weight: 600;
+}
+
+div.card_holder {
+    padding: 20px 20px;
+    width: 100%;
+    height: 100vh;
 }
