@@ -3,14 +3,7 @@ window.addEventListener('scroll', function() {
     var Home = document.querySelector('.docklink#Home');
     var AbtMe = document.querySelector('.docklink#AbtMe');
     var Social = document.querySelector('.docklink#Social');
-    var dockblur = document.querySelector('#dock_blur');
     var scrollTop = window.scrollY;
-  
-    if (scrollTop > 0) {
-      dockblur.classList.remove('reached');
-    } else {
-      dockblur.classList.add('reached');
-    }
 
     if (scrollTop > -100) {
       Home.classList.add('reached');
