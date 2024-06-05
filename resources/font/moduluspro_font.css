@@ -60,21 +60,9 @@
 
 @font-face {
     font-family: 'Modulus Pro';
-    src: url('https://kewla1d.github.io/resources/font/arkitype_-_modulus_pro_black-webfont.woff2') format('woff2'),
-         url('https://kewla1d.github.io/resources/font/arkitype_-_modulus_pro_black-webfont.woff') format('woff');
-    font-weight: 600;
-    font-style: normal;
-
-}
-
-
-
-
-@font-face {
-    font-family: 'Modulus Pro';
     src: url('https://kewla1d.github.io/resources/font/arkitype_-_modulus_pro_bold-webfont.woff2') format('woff2'),
          url('https://kewla1d.github.io/resources/font/arkitype_-_modulus_pro_bold-webfont.woff') format('woff');
-    font-weight: 700;
+    font-weight: 600;
     font-style: normal;
 
 }
@@ -86,7 +74,18 @@
     font-family: 'Modulus Pro';
     src: url('https://kewla1d.github.io/resources/font/arkitype_-_modulus_pro_extra_bold-webfont.woff2') format('woff2'),
          url('https://kewla1d.github.io/resources/font/arkitype_-_modulus_pro_extra_bold-webfont.woff') format('woff');
-    font-weight: 800;
+    font-weight: 700;
     font-style: normal;
 
+}
+
+
+
+
+@font-face {
+    font-family: 'Modulus Pro';
+    src: url('https://kewla1d.github.io/resources/font/arkitype_-_modulus_pro_black-webfont.woff2') format('woff2'),
+         url('https://kewla1d.github.io/resources/font/arkitype_-_modulus_pro_black-webfont.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
 }
