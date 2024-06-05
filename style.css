@@ -1,3 +1,17 @@
+:root {
+    --text1: rgba(255, 255, 255, 1);
+    --text2: rgba(255, 255, 255, 0.87);
+    --text3: rgba(255, 255, 255, 0.6);
+    --text4: rgba(255, 255, 255, 0.37);
+    --back: rgba(35, 37, 39, 1);
+    --base1: rgba(25, 27, 29, 1.00);
+    --base2: rgba(25, 27, 29, 0.87);
+    --base3: rgba(25, 27, 29, 0.60);
+    --base4: rgba(25, 27, 29, 0.37);
+    --highlight1: rgba(10, 132, 255, 0.2);
+    --highlight2: rgba(10, 132, 255, 0.05);
+}
+
 * {
     font-family: 'Modulus Pro', sans-serif;
 	font-weight: 500;
@@ -5,11 +19,14 @@
     margin: 0;
 	text-decoration: none;
 	user-select: none;
-	color: white;
+	color: var(--text1);
     transition: all 0.3s cubic-bezier(0.49, 0.27, 0, 1);
 }
 
 body {
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
     background-color: #232527;
     margin: 0;
     overflow-y:scroll;
@@ -31,7 +48,8 @@ body {
     div#dock {
         z-index: 100;
         border-radius: 20px;
-        background:#191b1d;
+        background: var(--base1);
+        border: 2px solid var(--back);
         display: inline-flex;
         padding: 8px;
         align-items: center;
@@ -59,36 +77,36 @@ body {
         font-size: 0px;
         letter-spacing: -5px;
         line-height: 0;
-        font-weight: 600;
-        color: rgba(255, 255, 255, 0.0);
+        font-weight: 700;
+        color: transparent;
         border-radius: 12px;
     
         svg {
             height: 18px;
             width: auto;
-            fill: rgba(255, 255, 255, 0.6);
+            fill: var(--text3);
         }
     
         path {
-            fill: rgba(255, 255, 255, 0.6);
+            fill: var(--text3);
         }
     }
     .docklink:hover {
         gap: 5px;
         font-size: 17px;
         letter-spacing: normal;
-        color: rgba(255, 255, 255, 1);
-        background: rgba(10, 132, 255, 0.05);
+        color: var(--text1);
+        background: var(--highlight2);
         scale: 0.95;
 
         path {
-            fill: white;
+            fill: var(--text1);
         }
     }
     
     .docklink.reached {
-        background-color: rgba(10, 132, 255, 0.2);
-        color: white;
+        background-color: var(--highlight1);
+        color: var(--text1);
         gap: 5px;
         font-size: 17px;
         letter-spacing: normal;
@@ -96,37 +114,78 @@ body {
         svg {
             height: 17px;
             width: auto;
-            fill: rgba(255, 255, 255, 1);
+            fill: var(--text1);
         }
     
         path {
-            fill: rgba(255, 255, 255, 1);
+            fill: var(--text1);
         }
     }
 }
 
 
 div.holder {
-    padding: 30px;
+    padding: 0px 30px;
     width: 100%;
-    height: 607px;
+    box-sizing: border-box;
+    height: fit-content;
+
+    div.card {
+        background-color: var(--base1);
+        height: fit-content;
+        width: 100%;
+        padding: 20px;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
 }
 
-div#cover {
-    background-color: #ffffff28;
-    height: 100%;
-    width: 100%;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+#cover_holder {
+    padding: 30px 30px 0px 30px;
+    box-sizing: border-box;
+
+    div#cover {
+        background-color: var(--base1);
+        height: fit-content;
+        width: 100%;
+        padding: 20px;
+        border-radius: 20px;
+        gap: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
 }
 
 #greeting {
     font-size: 40px;
+    color: var(--text3)
 }
-#name {
-    font-size: 60px;
-    font-weight: 600;
+
+#profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 9px 18px;
+    border-radius: 30px;
+
+    #pfp {
+        width: 50px;
+        border-radius: 50%;
+    }
+    #name {
+        font-size: 50px;
+        font-weight: 600;
+    }
+}
+#profile:hover {
+    background: var(--highlight2);
+    scale: 0.95;
 }
