@@ -1,33 +1,33 @@
 /* scroll move */
 window.addEventListener('scroll', function() {
-    var Home = document.querySelector('.docklink#Home');
-    var AbtMe = document.querySelector('.docklink#AbtMe');
-    var Social = document.querySelector('.docklink#Social');
+    var HomeLink = document.querySelector('.docklink#HomeLink');
+    var AbtMeLink = document.querySelector('.docklink#AbtMeLink');
+    var LinksLink = document.querySelector('.docklink#LinksLink');
     var scrollTop = window.scrollY;
 
     if (scrollTop > -100) {
-      Home.classList.add('reached');
+        HomeLink.classList.add('reached');
     } else {
-      Home.classList.remove('reached');
+        HomeLink.classList.remove('reached');
     }
 
     if (scrollTop >= 607) {
-      AbtMe.classList.add('reached');
-      Home.classList.remove('reached');
+        AbtMeLink.classList.add('reached');
+        HomeLink.classList.remove('reached');
     } else {
-      AbtMe.classList.remove('reached');
+        AbtMeLink.classList.remove('reached');
     }
 
     if (scrollTop >= 1214) {
-      Social.classList.add('reached');
-      AbtMe.classList.remove('reached');
+        LinksLink.classList.add('reached');
+        AbtMeLink.classList.remove('reached');
     } else {
-      Social.classList.remove('reached');
+        LinksLink.classList.remove('reached');
     }
 }
 );
 
 window.addEventListener("scroll", (event) => {
-  let scroll = this.scrollY;
-  console.log(scroll)
+let scroll = this.scrollY;
+console.log(scroll)
 });

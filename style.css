@@ -3,13 +3,24 @@
     --text2: rgba(255, 255, 255, 0.87);
     --text3: rgba(255, 255, 255, 0.6);
     --text4: rgba(255, 255, 255, 0.37);
-    --back: rgba(35, 37, 39, 1);
+    --back1: rgba(35, 37, 39, 1);
+    --back2: rgba(35, 37, 39, 0.87);
+    --back3: rgba(35, 37, 39, 0.6);
+    --back4: rgba(35, 37, 39, 0.37);
     --base1: rgba(25, 27, 29, 1.00);
     --base2: rgba(25, 27, 29, 0.87);
     --base3: rgba(25, 27, 29, 0.60);
     --base4: rgba(25, 27, 29, 0.37);
     --highlight1: rgba(10, 132, 255, 0.2);
     --highlight2: rgba(10, 132, 255, 0.05);
+    --red: 243, 139, 168;
+    --orange: 250, 179, 135;
+    --yellow: 249, 226, 175;
+    --green: 166, 227, 161;
+    --teal: 148, 226, 213;
+    --cyan: 116, 199, 236;
+    --blue: 137, 180, 250;
+    --purple: 203, 166, 247;
 }
 
 * {
@@ -33,7 +44,7 @@ body {
     animation: auto;
 }
 
-#dock_area {
+#dockholder {
     position: fixed;
     bottom: 0;
     align-self: stretch;
@@ -59,6 +70,7 @@ body {
         height: fit-content;
         position: fixed;
         bottom: 20px;
+        box-shadow: 0px 0px 0px 5px var(--back1);
     }
     
     .docklink {
@@ -123,26 +135,6 @@ body {
     }
 }
 
-
-div.holder {
-    padding: 0px 30px;
-    width: 100%;
-    box-sizing: border-box;
-    height: fit-content;
-
-    div.card {
-        background-color: var(--base1);
-        height: fit-content;
-        width: 100%;
-        padding: 20px;
-        border-radius: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-}
-
 #cover_holder {
     padding: 30px 30px 0px 30px;
     box-sizing: border-box;
@@ -152,40 +144,133 @@ div.holder {
         height: fit-content;
         width: 100%;
         padding: 20px;
-        border-radius: 20px;
+        border-radius: 30px;
         gap: 0px;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+
+        #greeting {
+            font-size: 40px;
+            color: var(--text3)
+        }
+        
+        #profile {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 9px 18px;
+            border-radius: 30px;
+        
+            #pfp {
+                width: 50px;
+                border-radius: 50%;
+            }
+            #name {
+                font-size: 50px;
+                font-weight: 600;
+                color: #c9b59e;
+            }
+        }
+        #profile:hover {
+            background: var(--highlight2);
+            scale: 0.95;
+        }
+        
+        div#speechbubble {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            #speechtriangle {
+                height: 20px;
+                width: 54px;
+                fill: var(--back3);
+            }
+        
+            div#card {
+                padding: 10px;
+                border-radius: 10px;
+                background-color: var(--back3);
+                font-size: 20px;
+                text-align: center;
+                color: var(--text3);
+            }
+        }
     }
 }
 
-#greeting {
-    font-size: 40px;
-    color: var(--text3)
+
+div.holder {
+    padding: 0px 30px 30px 30px;
+    width: 100%;
+    box-sizing: border-box;
+    height: fit-content;
+
+    div.card {
+        background-color: var(--base1);
+        height: fit-content;
+        width: 100%;
+        gap: 10px;
+        padding: 20px;
+        border-radius: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: column;
+    }
 }
 
-#profile {
+div.ctitle {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
+    width: 100%;
     gap: 10px;
-    padding: 9px 18px;
-    border-radius: 30px;
 
-    #pfp {
-        width: 50px;
-        border-radius: 50%;
-    }
-    #name {
-        font-size: 50px;
+    h3 {
+        font-size: 30px;
         font-weight: 600;
     }
+
+    svg.cicon {
+        width: 30px;
+        fill: white;
+    }
 }
-#profile:hover {
-    background: var(--highlight2);
-    scale: 0.95;
+
+div.csection {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+
+    .csect_title {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 5px;
+
+        svg {
+            height: 25px;
+            fill: var(--text2);
+        }
+
+        h4 {
+            font-size: 25px;
+            color: var(--text2);
+            font-weight: 600;
+        }
+    }
+
+    li {
+        font-size: 20px;
+        color: var(--text2);
+        padding-left: 10px;
+        list-style-type: "\2023   ";
+    }
 }
