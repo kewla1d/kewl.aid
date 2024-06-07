@@ -55,83 +55,83 @@ body {
     align-items: center;
     z-index: 100;
     justify-content: center;
+}
 
-    div#dock {
-        z-index: 100;
-        border-radius: 20px;
-        background: var(--base1);
-        border: 2px solid var(--back);
-        display: inline-flex;
-        padding: 8px;
-        align-items: center;
-        justify-content: center;
-        gap: 0px;
-        width: fit-content;
-        height: fit-content;
-        position: fixed;
-        bottom: 20px;
-        box-shadow: 0px 0px 0px 5px var(--back1);
-    }
-    
-    .docklink {
-        cursor:pointer;
-    
-        display: flex;
-        flex-direction: row;
-        gap: 0px;
-        margin: 0;
-        justify-content: center;
-        padding: 8px 14px;
-        text-decoration: none;
-        width: fit-content;
-        align-items: center;
-    
-        font-size: 0px;
-        letter-spacing: -5px;
-        line-height: 0;
-        font-weight: 700;
-        color: transparent;
-        border-radius: 12px;
-    
-        svg {
-            height: 18px;
-            width: auto;
-            fill: var(--text3);
-        }
-    
-        path {
-            fill: var(--text3);
-        }
-    }
-    .docklink:hover {
-        gap: 5px;
-        font-size: 17px;
-        letter-spacing: normal;
-        color: var(--text1);
-        background: var(--highlight2);
-        scale: 0.95;
+div#dock {
+    z-index: 100;
+    border-radius: 20px;
+    background: var(--base1);
+    border: 2px solid var(--back);
+    display: inline-flex;
+    padding: 8px;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+    width: fit-content;
+    height: fit-content;
+    position: fixed;
+    bottom: 20px;
+    box-shadow: 0px 0px 0px 5px var(--back1);
+}
 
-        path {
-            fill: var(--text1);
-        }
+.docklink {
+    cursor:pointer;
+
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    margin: 0;
+    justify-content: center;
+    padding: 8px 14px;
+    text-decoration: none;
+    width: fit-content;
+    align-items: center;
+
+    font-size: 0px;
+    letter-spacing: -5px;
+    line-height: 0;
+    font-weight: 700;
+    color: transparent;
+    border-radius: 12px;
+
+    svg {
+        height: 18px;
+        width: auto;
+        fill: var(--text3);
     }
+
+    path {
+        fill: var(--text3);
+    }
+}
+.docklink:hover {
+    gap: 5px;
+    font-size: 17px;
+    letter-spacing: normal;
+    color: var(--text1);
+    background: var(--highlight2);
+    scale: 0.95;
+
+    path {
+        fill: var(--text1);
+    }
+}
+
+.docklink.reached {
+    background-color: var(--highlight1);
+    color: var(--text1);
+    gap: 5px;
+    font-size: 17px;
+    letter-spacing: normal;
     
-    .docklink.reached {
-        background-color: var(--highlight1);
-        color: var(--text1);
-        gap: 5px;
-        font-size: 17px;
-        letter-spacing: normal;
-        
-        svg {
-            height: 17px;
-            width: auto;
-            fill: var(--text1);
-        }
-    
-        path {
-            fill: var(--text1);
-        }
+    svg {
+        height: 17px;
+        width: auto;
+        fill: var(--text1);
+    }
+
+    path {
+        fill: var(--text1);
     }
 }
 
