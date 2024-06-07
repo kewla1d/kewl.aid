@@ -94,15 +94,7 @@ div#dock {
     color: transparent;
     border-radius: 12px;
 
-    svg {
-        height: 18px;
-        width: auto;
-        fill: var(--text3);
-    }
-
-    path {
-        fill: var(--text3);
-    }
+    fill: var(--text3)
 }
 .docklink:hover {
     gap: 5px;
@@ -112,9 +104,7 @@ div#dock {
     background: var(--highlight2);
     scale: 0.95;
 
-    path {
-        fill: var(--text1);
-    }
+    fill: var(--text1);
 }
 
 .docklink.reached {
@@ -123,107 +113,106 @@ div#dock {
     gap: 5px;
     font-size: 17px;
     letter-spacing: normal;
-    
-    svg {
-        height: 17px;
-        width: auto;
-        fill: var(--text1);
-    }
 
-    path {
-        fill: var(--text1);
-    }
+    fill: var(--text1);
+}
+
+svg.docklink_icon {
+    height: 18px;
+    width: auto;
+    fill: inherit;
+}
+path {
+    fill: inherit;
 }
 
 #cover_holder {
     padding: 30px 30px 0px 30px;
     box-sizing: border-box;
-
-    div#cover {
-        background-color: var(--base1);
-        height: fit-content;
-        width: 100%;
-        padding: 20px;
-        border-radius: 30px;
-        gap: 0px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-
-        #greeting {
-            font-size: 40px;
-            color: var(--text3)
-        }
-        
-        #profile {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            align-content: center;
-            justify-content: center;
-            gap: 10px;
-            padding: 9px 18px;
-            border-radius: 30px;
-        
-            #pfp {
-                width: 50px;
-                border-radius: 50%;
-            }
-            #name {
-                font-size: 50px;
-                font-weight: 600;
-                color: #c9b59e;
-            }
-        }
-        #profile:hover {
-            background: var(--highlight2);
-            scale: 0.95;
-        }
-        
-        div#speechbubble {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-
-            #speechtriangle {
-                height: 20px;
-                width: 54px;
-                fill: var(--back3);
-            }
-        
-            div#card {
-                padding: 10px;
-                border-radius: 10px;
-                background-color: var(--back3);
-                font-size: 20px;
-                text-align: center;
-                color: var(--text3);
-            }
-        }
-    }
 }
 
+div#cover {
+    background-color: var(--base1);
+    height: fit-content;
+    width: 100%;
+    padding: 20px;
+    border-radius: 30px;
+    gap: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#greeting {
+    font-size: 40px;
+    color: var(--text3)
+}
+
+#profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 9px 18px;
+    border-radius: 30px;
+}
+#profile:hover {
+    background: var(--highlight2);
+    scale: 0.95;
+}
+
+#pfp {
+    width: 50px;
+    border-radius: 50%;
+}
+#name {
+    font-size: 50px;
+    font-weight: 600;
+    color: #c9b59e;
+}
+
+div#speechbubble {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#speechtriangle {
+    height: 20px;
+    width: 54px;
+    fill: var(--back3);
+}
+
+div#speechtext {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--back3);
+    font-size: 20px;
+    text-align: center;
+    color: var(--text3);
+}
 
 div.holder {
     padding: 0px 30px 30px 30px;
     width: 100%;
     box-sizing: border-box;
     height: fit-content;
+}
 
-    div.card {
-        background-color: var(--base1);
-        height: fit-content;
-        width: 100%;
-        gap: 10px;
-        padding: 20px;
-        border-radius: 30px;
-        display: flex;
-        justify-content: center;
-        align-items: start;
-        flex-direction: column;
-    }
+div.card {
+    background-color: var(--base1);
+    height: fit-content;
+    width: 100%;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
 }
 
 div.ctitle {
@@ -231,16 +220,16 @@ div.ctitle {
     flex-direction: row;
     width: 100%;
     gap: 10px;
+}
 
-    h3 {
-        font-size: 30px;
-        font-weight: 600;
-    }
+h3.ctitle_text {
+    font-size: 30px;
+    font-weight: 600;
+}
 
-    svg.cicon {
-        width: 30px;
-        fill: white;
-    }
+svg.cicon {
+    width: 30px;
+    fill: white;
 }
 
 div.csection {
@@ -248,29 +237,29 @@ div.csection {
     display: flex;
     flex-direction: column;
     gap: 2px;
+}
 
-    .csect_title {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 5px;
+.csect_title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
 
-        svg {
-            height: 25px;
-            fill: var(--text2);
-        }
+svg.csect_titleicon {
+    height: 25px;
+    fill: var(--text2);
+}
 
-        h4 {
-            font-size: 25px;
-            color: var(--text2);
-            font-weight: 600;
-        }
-    }
+h4.csect_titletext {
+    font-size: 25px;
+    color: var(--text2);
+    font-weight: 600;
+}
 
-    li {
-        font-size: 20px;
-        color: var(--text2);
-        padding-left: 10px;
-        list-style-type: "\2023   ";
-    }
+li {
+    font-size: 20px;
+    color: var(--text2);
+    padding-left: 10px;
+    list-style-type: "\2023   ";
 }
