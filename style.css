@@ -328,8 +328,9 @@ div.card {
             }
 
         /* Card Section Content */
-        p.csect_body {
+        li {
             font-size: 20px;
+            padding-left: 7px;
             color: var(--text2);
             list-style-type: "\2023   ";
         }
