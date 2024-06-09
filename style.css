@@ -261,6 +261,7 @@ div#cover {
             color: var(--text3);
             font-size: 20px;
             backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
         }
 
         
